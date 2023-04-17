@@ -10,7 +10,7 @@
                 <h1 class="fs-1 md_fs-3 lg_scale-150 md_as-fs ta-c md_ta-l"> Startups and their <br> Techies </h1>
                 <p class="ta-c md_ta-l"> Discover the <span class="f-col">Techies</span> behind <br class="sm_dp-none"> today's most successful startups </p>
                 <div class="gap"></div>
-                <a class="btn secondary md_as-fs hover_secondary-alt"> 
+                <a href="{% url 'list_view' %}" class="btn secondary md_as-fs hover_secondary-alt"> 
                     Browse Now <i class="ep-arrow-up-right-circle f-inherit"></i>
                 </a>
             </article>
@@ -30,7 +30,7 @@
 
             <div class="gap"></div>
 
-            <a class="btn secondary bdrs-pill p-2"> View More Bios <i class="ep-arrow-up-right-circle f-inherit"></i> </a>
+            <a href="{% url 'bio_list' %}" class="btn secondary bdrs-pill p-2"> View More Bios <i class="ep-arrow-up-right-circle f-inherit"></i> </a>
 
             <div class="gap h-20px"></div>
             
@@ -47,7 +47,7 @@
 
             <div class="gap"></div>
 
-            <a class="btn secondary bdrs-pill p-2"> View More Startups <i class="ep-arrow-up-right-circle f-inherit"></i> </a>
+            <a href="{% url 'start_list' %}" class="btn secondary bdrs-pill p-2"> View More Startups <i class="ep-arrow-up-right-circle f-inherit"></i> </a>
 
             <div class="gap h-20px"></div>
             

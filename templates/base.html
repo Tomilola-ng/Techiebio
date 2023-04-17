@@ -12,7 +12,7 @@
     <title> {% block title %} TechieBio | Techpreneurs bio & Startup {% endblock title %} </title>
     <meta name="author" content="{% block author %} Oluwafemi Tomilola ( tomilola_ng ) {% endblock author %}">
     <meta name="description" content="{% block description %} Tech entrepreneurs biography, and their Startups {% endblock description %}">
-    <meta name="keywords" content="{% block keywords %} tech, technology, techie, nigeria, bio, africa, coding, programming {% endblock keywords %}">
+    <meta name="keywords" content="{% block keywords %} tech, technology, techie, nigeria, bio, africa {% endblock keywords %}">
 
     <meta name="robots" content="index, follow">
     <meta name="language" content="English"> 
@@ -77,7 +77,7 @@
             <a href="{% url 'bio_list' %}" class="mb-3 ep-journal fs-5 hover_f-col"> Bios</a>
             <a href="{% url 'start_list' %}" class="mb-3 ep-files fs-5 hover_f-col"> Startups</a>
             <a href="{% url 'advertise_view' %}" class="mb-3 ep-heart fs-5 hover_f-col"> Adverts </a>
-            <a href="{% url 'featured_view' %}" class="mb-3 ep-bag fs-5 hover_f-col"> Get Featured</a>
+            <!-- <a href="{% url 'featured_view' %}" class="mb-3 ep-bag fs-5 hover_f-col"> Get Featured</a> -->
             <div class="gap"></div>
             <form method="get" action="{% url 'list_view' %}" class="epic_f-white fs-5 row jc-sb h-40px">
                 <i class="col ep-search h-100"></i>
@@ -98,7 +98,7 @@
                 <a href="{% url 'bio_list' %}" class="bio_link zi-100">Bios</a>
                 <a href="{% url 'start_list' %}" class="bio_link zi-100">Startups</a>
                 <a href="{% url 'advertise_view' %}" class=" zi-100">Adverts</a>
-                <a href="{% url 'featured_view' %}" class=" zi-100">Get Featured</a>
+                <!-- <a href="{% url 'featured_view' %}" class=" zi-100">Get Featured</a> -->
                 <form method="get" action="{% url 'list_view' %}" class="epic_f-white fs-5 row jc-sb h-40px w-80">
                     <i class="col ep-search h-100"></i>
                     <input type="text" name="content" class="mt-0 bxsh-n w-90 h-100 bold zi-100 btn ml-1 bdrs-pill" placeholder="search...">
