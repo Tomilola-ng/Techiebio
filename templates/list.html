@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <section class="row fw-w w-100 pos-relative">
+        <!-- <div class="gap"></div>
+        <form method="get" id="search"
+        class="m-auto w-70 bx-sh-2 bdrs-pill o-hide fs-5"> 
+            <input type="text" name="content" placeholder="Search ..." class="bxsh-n w-100 bold pl-4 h-30px col" value="{{ title }}">
+        </form> -->
+        <div class="row fw-w w-100 jc-se">
+            <div class="gap"></div>
+            {% for obj in myFilter.qs %}
+                {% include 'bio_card.html' %}
+            {% empty %}
+                <h1> No articles with that description </h1>
+            {% endfor %}
+        </div>
+    </section>
+
+{% endblock content %}

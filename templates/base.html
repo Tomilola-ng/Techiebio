@@ -1,0 +1,178 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+ 
+    <title> {% block title %} TechieBio | Techpreneurs bio & Startup {% endblock title %} </title>
+    <meta name="author" content="{% block author %} Oluwafemi Tomilola ( tomilola_ng ) {% endblock author %}">
+    <meta name="description" content="{% block description %} Tech entrepreneurs biography, and their Startups {% endblock description %}">
+    <meta name="keywords" content="{% block keywords %} tech, technology, techie, nigeria, bio, africa, coding, programming {% endblock keywords %}">
+
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English"> 
+    <meta name="revisit-after" content="2 days">
+    
+    <meta name="google-site-verification" content="CX4Z8TMTIeCTTORSQ7LWjVx33zaMQAtra36ZkgfX3Rk" />
+
+    <link rel="shortcut icon" href='{% static "techiebio_profile.jpg" %}' type="image/x-icon">
+    
+    <link rel="canonical" href="https://techiebio.up.railway.app" />
+
+    <meta name="image" content="{% static 'techiebio_profile.jpg' %}">
+
+    <meta property="og:title" content="TechieBio | Techpreneurs bio & Startup" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://techiebio.up.railway.app/" />
+    <meta property="og:image" content="{% static 'techiebio_profile.jpg' %}" />
+    <meta property="og:description" content="Tech entrepreneurs biography, and their startups" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@tomilola_ng">
+    <meta name="twitter:title" content="TechieBio | Techpreneurs bio & Startup">
+    <meta name="twitter:description" content="Tech entrepreneurs biography, and their startups">
+    <meta name="twitter:image" content="{% static 'techiebio_profile.jpg' %}">
+    
+    <!-- <script src="https://epic-styles.github.io/epic.js"></script> -->
+    
+    {% include 'style.html' %}
+
+    <style>
+        :root {
+            --col : #fd7e14; 
+            --acc : #f2f2f2;
+        }
+        *::-webkit-scrollbar {
+            width: 0.3rem;
+        }
+    
+        *::-webkit-scrollbar-track {
+            background: transparent;
+            padding-top: 5em;
+        }
+        *::-webkit-scrollbar-thumb {
+            background: var(--col);
+            margin-top: 5em;
+            padding-top: 5em;
+            border-radius: 2rem;
+        }
+    </style>
+
+</head>
+
+<body class="row fw-w lg_plr-6">
+
+    <aside class="sm_dp-none lg_w-15 col epic_align-left fs-2 as-fs plr-2 pt-4">
+            <div class="gap h-50px"></div>
+            <a href="{% url 'home_view' %}" class="row fs-3 hover_f-col bold">
+                techiebio
+            </a>
+            <hr class="w-80 mb-4">
+            <a href="{% url 'list_view' %}" class="mb-3 ep-book fs-5 hover_f-col"> Articles </a>
+            <a href="{% url 'bio_list' %}" class="mb-3 ep-journal fs-5 hover_f-col"> Bios</a>
+            <a href="{% url 'start_list' %}" class="mb-3 ep-files fs-5 hover_f-col"> Startups</a>
+            <a href="{% url 'advertise_view' %}" class="mb-3 ep-heart fs-5 hover_f-col"> Adverts </a>
+            <a href="{% url 'featured_view' %}" class="mb-3 ep-bag fs-5 hover_f-col"> Get Featured</a>
+            <div class="gap"></div>
+            <form method="get" action="{% url 'list_view' %}" class="epic_f-white fs-5 row jc-sb h-40px">
+                <i class="col ep-search h-100"></i>
+                <input type="text" name="content" class="mt-0 bxsh-n w-90 h-100 bold zi-100 btn ml-1 bdrs-pill" placeholder="search...">
+            </form>
+            <div class="gap"></div>
+    </aside>
+
+    <div id="app" class="sm_w-100 lg_w-60 plr-2 lg_h-100vh lg_oy-scroll as-fs">
+        <!-- Header -->
+        <header class="epic_header epic_f-inherit sm_w-100 h-calc md_mbt-2 lg_dp-none">
+            <a href="{% url 'home_view' %}" class="epic_logo row fs-5 hover_f-col">
+                techiebio
+            </a>
+            
+            <nav class="epic_nav mxw-500 zi-100 sm_mh-100vh">
+                <a href="{% url 'list_view' %}" class="bio_link zi-100">Articles</a>
+                <a href="{% url 'bio_list' %}" class="bio_link zi-100">Bios</a>
+                <a href="{% url 'start_list' %}" class="bio_link zi-100">Startups</a>
+                <a href="{% url 'advertise_view' %}" class=" zi-100">Adverts</a>
+                <a href="{% url 'featured_view' %}" class=" zi-100">Get Featured</a>
+                <form method="get" action="{% url 'list_view' %}" class="epic_f-white fs-5 row jc-sb h-40px w-80">
+                    <i class="col ep-search h-100"></i>
+                    <input type="text" name="content" class="mt-0 bxsh-n w-90 h-100 bold zi-100 btn ml-1 bdrs-pill" placeholder="search...">
+                </form>
+                <div class="epic_close-nav hover_secondary-alt zi-100">Close</div>
+            </nav>
+            <div class="epic_menu-btn hover_fill-col">
+                <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" width="25" height="30" viewBox="0 0 16 16">
+                    <path d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg> 
+            </div>
+        </header>
+
+        {% block content %}
+        {% endblock content %}
+
+    </div>
+
+    <aside class="lg_mh-90vh lg_w-25 sm_w-95 container as-fs pl-3">
+
+        {% if most_viewed_bios %}
+            <figure class="epic_f-inherit card container col pl-3">
+                <h2 class="bold w-100">
+                    Most Read Bio
+                </h2>
+                {% for bio in most_viewed_bios %}
+                <div class="row w-100 jc-sb pr-3 mb-1">
+                    <a href="{{ bio.get_absolute_url }}" class="f-col hover_f-black"> > {{ bio.title }} </a>
+                    <span>{{ bio.hit_count.hits }} <i class="ep-eye-fill f-red"></i> </span>
+                </div>
+                {% endfor %}
+            </figure>
+        {% endif %}
+
+        {% if top_startup %}
+            <figure class="epic_f-inherit card container col pl-3">
+                <h2 class="bold w-100">
+                    Buzzing Startups
+                </h2>
+                {% for bio in top_startup %}
+                <div class="row w-100 jc-sb pr-3 mb-1">
+                    <a href="{{ bio.get_absolute_url }}" class="f-col hover_f-black"> > {{ bio.title }} </a>
+                    <span>{{ bio.hit_count.hits }} <i class="ep-eye-fill f-red"></i> </span>
+                </div>
+                {% endfor %}
+            </figure>
+        {% endif %}
+
+        <figure class="bg-white f-col epic_f-inherit card container col">
+            <h2 class="bold w-100 fs-3 ta-c f-black">
+                techiebio socials
+            </h2>
+            <div class="col container fs-4 plr-2">
+                <a target="_blank" href="https://www.youtube.com/@techiebio" class="ep-youtube hover_f-black secondary card btn w-100 m-auto mb-2">
+                    <span class="fs-6">Youtube Page</span> 
+                </a>
+                <a target="_blank" href="https://www.linkedin.com/company/techiebio" class="ep-linkedin hover_f-black secondary card btn w-100 m-auto mb-2">
+                    <span class="fs-6">Linkedin Page</span>
+                </a>
+                <a target="_blank" href="https://linktr.ee/techiebio" class="ep-link hover_f-black secondary card btn w-100 m-auto mb-2">
+                    <span class="fs-6">Linktree</span>
+                </a>
+            </div>
+        </figure>
+
+    </aside>
+
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+            <li class="card bg-orange-80 w-320px container pos-fixed bottom-left mb-2 ml-2 p-2">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% load static %}
+
+<a href="{{ obj.get_absolute_url }}" class="container w-90 sm_w-80 mxw-500 o-hide row fw-w jc-sb p-0" itemscope itemtype="https://schema.org/ScholarlyArticle">
+    <hr class="f-gray">
+    <div class="w-40 sm_w-100">
+        <img src="{{ obj.image }}" alt="{{obj.title}}" srcset="">
+    </div>
+    <span class="w-50 sm_w-100 p-1 sm_p-0 col ai-fs">
+        <h1 class="fs-5" itemprop="name">{{ obj.title }} </h1>
+        <p class="f-grey" itemprop="about"> {{ obj.about | safe | truncatewords_html:40 }} </p>
+        <span class="w-40 dp-flex jc-sb">
+            <!-- <span class="ep-eye-fill"> {{ obj.hit_count.hits }} {{ obj.hit_count.hits|pluralize:"view,views" }} </span> -->
+            
+        </span>
+        <p class="btn secondary mt-3"> Read >> </p>
+    </span>
+</a>
+<div class="gap"></div>

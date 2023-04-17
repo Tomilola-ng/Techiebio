@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <section class="row fw-w w-100 sm_mh-95vh lg_mh-80vh pos-relative">
+        <form action="{% url 'searchView' %}" method="get" 
+        class="container w-90 row bx-sh-2 bdrs-pill o-hide"> 
+            <input type="text" name="q" placeholder="Search ..." class="bxsh-n w-100 bold pl-3 row ai-fs" value="{{ query }}">  
+        </form>
+        <div class="gap"></div>
+        {% if results %}
+            {% for bio in results %}
+                {% include 'core/bio_card.html' %}
+            {% endfor %}
+        {% else %}
+            <p class="fs-1 bold scale-125 bd-2-red pbt-6 plr-4 mb-4 bdrs" >No results found.</p>
+        {% endif %}
+    </section>
+{% endblock %}
