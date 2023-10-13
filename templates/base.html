@@ -6,22 +6,22 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
- 
+
     <title> {% block title %} TechieBio | Techpreneurs bio & Startup {% endblock title %} </title>
     <meta name="author" content="{% block author %} Oluwafemi Tomilola ( tomilola_ng ) {% endblock author %}">
     <meta name="description" content="{% block description %} Tech entrepreneurs biography, and their Startups {% endblock description %}">
     <meta name="keywords" content="{% block keywords %} tech, technology, techie, nigeria, bio, africa {% endblock keywords %}">
 
     <meta name="robots" content="index, follow">
-    <meta name="language" content="English"> 
+    <meta name="language" content="English">
     <meta name="revisit-after" content="2 days">
-    
+
     <meta name="google-site-verification" content="CX4Z8TMTIeCTTORSQ7LWjVx33zaMQAtra36ZkgfX3Rk" />
 
     <link rel="shortcut icon" href='{% static "techiebio_profile.jpg" %}' type="image/x-icon">
-    
+
     <link rel="canonical" href="https://techiebio.up.railway.app" />
 
     <meta name="image" content="{% static 'techiebio_profile.jpg' %}">
@@ -37,18 +37,19 @@
     <meta name="twitter:title" content="TechieBio | Techpreneurs bio & Startup">
     <meta name="twitter:description" content="Tech entrepreneurs biography, and their startups">
     <meta name="twitter:image" content="{% static 'techiebio_profile.jpg' %}">
-    
+
     <script src="https://epic-styles.github.io/epic.js"></script>
+    <meta name="google-site-verification" content="hhNsGGODtE8aN62cPAzMZTTXn-Kgj06lV5yAMpAUEtc" />
 
     <style>
         :root {
-            --col : #fd7e14; 
+            --col : #fd7e14;
             --acc : #f2f2f2;
         }
         *::-webkit-scrollbar {
             width: 0.3rem;
         }
-    
+
         *::-webkit-scrollbar-track {
             background: transparent;
             padding-top: 5em;
@@ -90,7 +91,7 @@
             <a href="{% url 'home_view' %}" class="epic_logo row fs-5 hover_f-col">
                 techiebio
             </a>
-            
+
             <nav class="epic_nav mxw-500 zi-100 sm_mh-100vh">
                 <a href="{% url 'list_view' %}" class="bio_link zi-100">Articles</a>
                 <a href="{% url 'bio_list' %}" class="bio_link zi-100">Bios</a>
@@ -106,7 +107,7 @@
             <div class="epic_menu-btn hover_fill-col">
                 <svg xmlns="http://www.w3.org/2000/svg" class="menu-icon" width="25" height="30" viewBox="0 0 16 16">
                     <path d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
-                </svg> 
+                </svg>
             </div>
         </header>
 
@@ -151,7 +152,7 @@
             </h2>
             <div class="col container fs-4 plr-2">
                 <a target="_blank" href="https://www.youtube.com/@techiebio" class="ep-youtube hover_f-black secondary card btn w-100 m-auto mb-2">
-                    <span class="fs-6">Youtube Page</span> 
+                    <span class="fs-6">Youtube Page</span>
                 </a>
                 <a target="_blank" href="https://www.linkedin.com/company/techiebio" class="ep-linkedin hover_f-black secondary card btn w-100 m-auto mb-2">
                     <span class="fs-6">Linkedin Page</span>
@@ -171,6 +172,6 @@
             {% endfor %}
         </ul>
     {% endif %}
-    
+
 </body>
 </html>
