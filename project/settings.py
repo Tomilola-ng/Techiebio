@@ -3,11 +3,11 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = 'django-insecure-kog0u^drg^*_k2rxes&p*&s8+fh7s%%#-o=eo6@q_9#)ox*x3%'
+SECRET_KEY = "django-insecure-kog0u^drg^*_k2rxes&p*&s8+fh7s%%#-o=eo6@q_9#)ox*x3%"
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -68,8 +68,11 @@ WSGI_APPLICATION = 'project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'techiesbio$default',
+        'USER':'techiesbio',
+        'PASSWORD':'Soldier12*',
+        'HOST':'techiesbio.mysql.pythonanywhere-services.com',
     }
 }
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
