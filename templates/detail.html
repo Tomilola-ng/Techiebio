@@ -13,18 +13,18 @@
 
     <!-- Start : Home Section -->
     <section id="detail" class="container">
-        <article class="card lg_w-70 col epic_align-left m-auto p-2">
-            <h1 class="fs-1"> {{ article.title }} </h1>
+        <article class="col epic_align-left m-auto p-2">
+            <h1 class="fs-2"> {{ article.title }} </h1>
             <a class="f-grey"> 
                 <span class="bold">{{ article.hit_count.hits }} {{ article.hit_count.hits|pluralize:"view,views" }} <i class="ep-eye-fill f-grey"></i> </span> {{article.updated}} </a>
             
             <div class="gap h-25px"></div>
-            <div class="container">
+            <div class="md_w-50 bdrs m-auto">
                 <img src="{{ article.image }}" alt="{{article.title}}" srcset="">
             </div>
-            <div class="container mlr-0 plr-0">
+            <div class="container mlr-0 plr-0 pbt-1">
                 {% for tag in object.tags.all %}
-                    <a class="fs-7" href="/articles/?content={{tag.name}}">#{{ tag.name }}</a>
+                    <a class="fs-7 bg-grey f-black hover_f-col" href="/articles/?content={{tag.name}}">#{{ tag.name }}</a>
                 {% endfor %}
             <!-- <div class="gap lg_dp-none"></div>
                     <form method="POST" action="">
