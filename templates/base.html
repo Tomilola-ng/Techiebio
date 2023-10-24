@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-    <title> {% block title %} TechieBio | Techpreneurs bio & Startup {% endblock title %} </title>
+    <title> {% block title %} TechiesBio | Techpreneurs bio & Startup {% endblock title %} </title>
     <meta name="author" content="{% block author %} Oluwafemi Tomilola ( tomilola_ng ) {% endblock author %}">
     <meta name="description" content="{% block description %} Tech entrepreneurs biography, and their Startups {% endblock description %}">
     <meta name="keywords" content="{% block keywords %} tech, technology, techie, nigeria, bio, africa {% endblock keywords %}">
@@ -22,11 +22,11 @@
 
     <link rel="shortcut icon" href='{% static "techiebio_profile.jpg" %}' type="image/x-icon">
 
-    <link rel="canonical" href="https://techiebio.up.railway.app" />
+    <link rel="canonical" href="https://techiesbio.pythonanywhere.com" />
 
     <meta name="image" content="{% static 'techiebio_profile.jpg' %}">
 
-    <meta property="og:title" content="TechieBio | Techpreneurs bio & Startup" />
+    <meta property="og:title" content="TechiesBio | Techpreneurs bio & Startup" />
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://techiebio.up.railway.app/" />
     <meta property="og:image" content="{% static 'techiebio_profile.jpg' %}" />
@@ -34,7 +34,7 @@
 
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@tomilola_ng">
-    <meta name="twitter:title" content="TechieBio | Techpreneurs bio & Startup">
+    <meta name="twitter:title" content="TechiesBio | Techpreneurs bio & Startup">
     <meta name="twitter:description" content="Tech entrepreneurs biography, and their startups">
     <meta name="twitter:image" content="{% static 'techiebio_profile.jpg' %}">
 
@@ -66,15 +66,15 @@
 
 <body class="row fw-w lg_plr-6">
 
-    <aside class="sm_dp-none lg_w-15 col epic_align-left fs-2 as-fs plr-2 pt-4">
+    <aside class="sm_dp-none lg_w-15 col epic_align-left fs-2 as-fs plr-2">
             <div class="gap h-50px"></div>
             <a href="{% url 'home_view' %}" class="row fs-3 hover_f-col bold">
-                techiebio
+                Techiesbio
             </a>
             <hr class="w-80 mb-4">
             <a href="{% url 'list_view' %}" class="mb-3 ep-book fs-5 hover_f-col"> Articles </a>
-            <a href="{% url 'bio_list' %}" class="mb-3 ep-journal fs-5 hover_f-col"> Bios</a>
-            <a href="{% url 'start_list' %}" class="mb-3 ep-files fs-5 hover_f-col"> Startups</a>
+            <a href="{% url 'bio_list' %}" class="mb-3 ep-journal fs-5 hover_f-col"> Bios </a>
+            <a href="{% url 'start_list' %}" class="mb-3 ep-files fs-5 hover_f-col"> Startups </a>
             <a href="{% url 'advertise_view' %}" class="mb-3 ep-heart fs-5 hover_f-col"> Adverts </a>
             <!-- <a href="{% url 'featured_view' %}" class="mb-3 ep-bag fs-5 hover_f-col"> Get Featured</a> -->
             <div class="gap"></div>
@@ -121,26 +121,28 @@
         {% if most_viewed_bios %}
             <figure class="epic_f-inherit card container col pl-3">
                 <h2 class="bold w-100">
-                    Most Read Bio
+                    Most read bio
                 </h2>
                 {% for bio in most_viewed_bios %}
                 <div class="row w-100 jc-sb pr-3 mb-1">
-                    <a href="{{ bio.get_absolute_url }}" class="f-col hover_f-black"> > {{ bio.title }} </a>
-                    <span>{{ bio.hit_count.hits }} <i class="ep-eye-fill f-red"></i> </span>
+                    <div class="h-100 bg-col pl-1 bdrs-pill"></div>
+                    <a href="{{ bio.get_absolute_url }}" class="f-col hover_f-black fs-6"> > {{ bio.title }} </a>
+                    <span class="row fs-7">{{ bio.hit_count.hits }} <i class="ep-eye-fill"></i> </span>
                 </div>
                 {% endfor %}
             </figure>
         {% endif %}
 
         {% if top_startup %}
-            <figure class="epic_f-inherit card container col pl-3">
+            <figure class="epic_f-inherit card container col pl-3 mbt-2">
                 <h2 class="bold w-100">
-                    Buzzing Startups
+                    Buzzing startups
                 </h2>
                 {% for bio in top_startup %}
-                <div class="row w-100 jc-sb pr-3 mb-1">
-                    <a href="{{ bio.get_absolute_url }}" class="f-col hover_f-black"> > {{ bio.title }} </a>
-                    <span>{{ bio.hit_count.hits }} <i class="ep-eye-fill f-red"></i> </span>
+                <div class="row w-100 jc-sb pr-3 mb-1 ">
+                    <div class="h-100 bg-col pl-1 bdrs-pill"></div>
+                    <a href="{{ bio.get_absolute_url }}" class="f-col hover_f-black fs-6"> > {{ bio.title }} </a>
+                    <span class="row fs-7">{{ bio.hit_count.hits }} <i class="ep-eye-fill"></i> </span>
                 </div>
                 {% endfor %}
             </figure>
@@ -148,7 +150,7 @@
 
         <figure class="bg-white f-col epic_f-inherit card container col">
             <h2 class="bold w-100 fs-3 ta-c f-black">
-                techiebio socials
+                Socials
             </h2>
             <div class="col container fs-4 plr-2">
                 <a target="_blank" href="https://www.youtube.com/@techiebio" class="ep-youtube hover_f-black secondary card btn w-100 m-auto mb-2">
