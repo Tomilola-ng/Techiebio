@@ -125,9 +125,9 @@
                 </h2>
                 {% for bio in most_viewed_bios %}
                 <div class="row w-100 jc-sb pr-3 mb-1">
-                    <div class="h-100 bg-col pl-1 bdrs-pill"></div>
-                    <a href="{{ bio.get_absolute_url }}" class="f-col hover_f-black fs-6"> > {{ bio.title }} </a>
-                    <span class="row fs-7">{{ bio.hit_count.hits }} <i class="ep-eye-fill"></i> </span>
+                    <div class="h-100 bg-col plr-1 bdrs-pill"></div>
+                    <a href="{{ bio.get_absolute_url }}" class="f-col hover_f-black fs-6"> {{ bio.title }} </a>
+                    <span class="row fs-6">{{ bio.hit_count.hits }} <i class="ep-eye-fill"></i> </span>
                 </div>
                 {% endfor %}
             </figure>
@@ -140,9 +140,9 @@
                 </h2>
                 {% for bio in top_startup %}
                 <div class="row w-100 jc-sb pr-3 mb-1 ">
-                    <div class="h-100 bg-col pl-1 bdrs-pill"></div>
-                    <a href="{{ bio.get_absolute_url }}" class="f-col hover_f-black fs-6"> > {{ bio.title }} </a>
-                    <span class="row fs-7">{{ bio.hit_count.hits }} <i class="ep-eye-fill"></i> </span>
+                    <div class="h-100 bg-col plr-1 bdrs-pill"></div>
+                    <a href="{{ bio.get_absolute_url }}" class="f-col hover_f-black fs-6"> {{ bio.title }} </a>
+                    <span class="row fs-6">{{ bio.hit_count.hits }} <i class="ep-eye-fill"></i> </span>
                 </div>
                 {% endfor %}
             </figure>
