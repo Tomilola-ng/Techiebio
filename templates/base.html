@@ -67,7 +67,7 @@
 <body class="row fw-w lg_plr-6">
 
     <aside class="sm_dp-none lg_w-15 col epic_align-left fs-2 as-fs plr-2">
-            <div class="gap h-50px"></div>
+            <div class="gap h-30px"></div>
             <a href="{% url 'home_view' %}" class="row fs-3 hover_f-col bold">
                 Techiesbio
             </a>
@@ -119,14 +119,13 @@
     <aside class="lg_mh-90vh lg_w-25 sm_w-95 container as-fs pl-3">
 
         {% if most_viewed_bios %}
-            <figure class="epic_f-inherit card container col pl-3">
+            <figure class="epic_f-inherit card container col pl-2">
                 <h2 class="bold w-100">
                     Most read bio
                 </h2>
                 {% for bio in most_viewed_bios %}
-                <div class="row w-100 jc-sb pr-3 mb-1">
-                    <div class="h-100 bg-col plr-1 bdrs-pill"></div>
-                    <a href="{{ bio.get_absolute_url }}" class="f-col hover_f-black fs-6"> {{ bio.title }} </a>
+                <div class="row w-100 jc-sb ai-s pr-3 mb-1">
+                    <a href="{{ bio.get_absolute_url }}" class="f-col hover_f-black fs-6 pr-2"> {{ bio.title }} </a>
                     <span class="row fs-6">{{ bio.hit_count.hits }} <i class="ep-eye-fill"></i> </span>
                 </div>
                 {% endfor %}
@@ -134,14 +133,13 @@
         {% endif %}
 
         {% if top_startup %}
-            <figure class="epic_f-inherit card container col pl-3 mbt-2">
+            <figure class="epic_f-inherit card container col pl-2 mbt-2">
                 <h2 class="bold w-100">
                     Buzzing startups
                 </h2>
                 {% for bio in top_startup %}
-                <div class="row w-100 jc-sb pr-3 mb-1 ">
-                    <div class="h-100 bg-col plr-1 bdrs-pill"></div>
-                    <a href="{{ bio.get_absolute_url }}" class="f-col hover_f-black fs-6"> {{ bio.title }} </a>
+                <div class="row w-100 jc-sb  ai-spr-3 mb-1 ">
+                    <a href="{{ bio.get_absolute_url }}" class="f-col hover_f-black fs-6 pr-2"> {{ bio.title }} </a>
                     <span class="row fs-6">{{ bio.hit_count.hits }} <i class="ep-eye-fill"></i> </span>
                 </div>
                 {% endfor %}
